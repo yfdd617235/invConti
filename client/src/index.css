@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
-  color: white;
+  /* background-color: black;
+  color: white; */
 }
 
 /* Ocultar scrollbar en navegadores como Chrome, Safari */
@@ -29,5 +29,18 @@ body {
   /* color: black !important; */
   }
 
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 10rem; /* Ajusta la altura según lo necesario */
+  }
+}
+
+.animate-grow {
+  animation: grow 20s ease forwards;
 }
 

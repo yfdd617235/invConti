@@ -9,20 +9,11 @@ import {
   UserPlusIcon,
   Bars3Icon
 } from "@heroicons/react/24/outline";
-import {ADMIN} from '../projects';
+import { ADMIN } from '../projects';
 
 function NavBar() {
-  const [isVisible, setIsVisible] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isAuthenticated, logout, user } = useAuth();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -33,170 +24,67 @@ function NavBar() {
   };
 
   return (
-    <nav
-      className={`bg-black fixed top-0 left-1/2 transform -translate-x-1/2 w-full py-0 z-50 print:hidden`}
-    >
-      <div className="mr-2 flex items-center justify-between">
-        <div className="flex items-center">
-          <Link to="/">
-            <div className="h-14 w-14 overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}logoT.png`}
-                alt="PPI"
-                className="h-full w-full object-cover object-center scale-125"
-              />
-            </div>
+    <nav className="bg-white h-16 fixed top-0 w-full py-0 z-50 shadow-md">
+      <div className="flex justify-between items-center h-full px-10">
+        {/* Logo */}
+        <Link to="/">
+          <div className="h-12 overflow-hidden">
+            <img
+              src={`${import.meta.env.BASE_URL}logoIC.webp`}
+              alt="PPI"
+              className="h-full w-full object-cover object-center scale-125"
+            />
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-10 items-center">
+          <Link to="/about" className="font-bold hover:text-blue-900 relative group">
+            Quiénes somos
+            <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          <Link to="/clients" className="font-bold hover:text-blue-900 relative group">
+            Nuestros clientes
+            <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          <Link to="/services" className="font-bold hover:text-blue-900 relative group">
+            Servicios
+            <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
+          </Link>
+          <Link to="/contact" className="text-white hover:bg-blue-900 relative group bg-slate-800 rounded-md p-1 px-2">
+            Contacto
           </Link>
         </div>
 
-        <div className="flex items-center">
-          {isAuthenticated && (
-            <div className="text-sm text-green-500 flex items-center flex-grow md:flex-grow-0 mx-4">
-              {user.username}
-            </div>
-          )}
-
-          {/* Mostrar el menú hamburguesa o el icono de login según el estado de autenticación */}
-          {isAuthenticated ? (
-            <button onClick={toggleMenu} className="text-white md:hidden">
-              <Bars3Icon className="h-6 w-6" />
-            </button>
-          ) : (
-            <Link to="/login" className="text-white md:hidden">
-              <ArrowLeftOnRectangleIcon className="h-6 w-6" />
-            </Link>
-          )}
-
-          {/* Menú de navegación para pantallas grandes */}
-          <ul className={`hidden md:flex flex-wrap gap-x-3 items-center ${!isAuthenticated ? 'justify-end' : ''}`}>
-            {isAuthenticated ? (
-              <>
-                <li>
-                  <Link
-                    to="/tasks"
-                    className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
-                  >
-                    <ClipboardDocumentCheckIcon className="h-5 w-5 text-white" />
-                    <span className="sr-only">Tasks</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/profile"
-                    className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-500"
-                  >
-                    <AdjustmentsHorizontalIcon className="h-5 w-5 text-green-500" />
-                    <span className="sr-only">Profile</span>
-                  </Link>
-                </li>
-                {user.email === ADMIN && (
-                  <li>
-                    <Link
-                      to="/register"
-                      className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm border border-zinc-500"
-                    >
-                      <UserPlusIcon className="h-5 w-5 text-zinc-500" />
-                      <span className="sr-only">Register</span>
-                    </Link>
-                  </li>
-                )}
-                <li>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      logout();
-                      closeMenu(); // Cerrar el menú al hacer clic en Logout
-                    }}
-                    className="flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-500"
-                  >
-                    <ArrowRightOnRectangleIcon className="h-5 w-5 text-red-500" />
-                    <span className="sr-only">Logout</span>
-                  </Link>
-                </li>
-              </>
-            ) : (
-              <li>
-                <Link
-                  to="/login"
-                  className="flex items-center gap-2 px-2 py-1 sm:px-2 sm:py-1 rounded-sm text-sm sm:text-base border border-zinc-700"
-                >
-                  <ArrowLeftOnRectangleIcon className="h-5 w-5 text-white" />
-                  <span className="sr-only">Login</span>
-                </Link>
-              </li>
-            )}
-          </ul>
-
-          {/* Menú hamburguesa desplegable para pantallas pequeñas */}
-          {isMenuOpen && (
-            <ul className="absolute right-0 top-12 text-white rounded-md flex flex-col gap-3 md:hidden">
-              {isAuthenticated ? (
-                <>
-                  <li>
-                    <Link
-                      to="/tasks"
-                      className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
-                      onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
-                    >
-                      <ClipboardDocumentCheckIcon className="h-5 w-5 text-white" />
-                      <span className="sr-only">Tasks</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/profile"
-                      className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
-                      onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
-                    >
-                      <AdjustmentsHorizontalIcon className="h-5 w-5 text-green-600" />
-                      <span className="sr-only">Profile</span>
-                    </Link>
-                  </li>
-                  {user.email === ADMIN && (
-                    <li>
-                      <Link
-                        to="/register"
-                        className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
-                        onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
-                      >
-                        <UserPlusIcon className="h-5 w-5 text-gray-500" />
-                        <span className="sr-only">Register</span>
-                      </Link>
-                    </li>
-                  )}
-                  <li>
-                    <Link
-                      to="/"
-                      onClick={() => {
-                        logout();
-                        closeMenu(); // Cerrar el menú al hacer clic en Logout
-                      }}
-                      className="bg-black flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
-                    >
-                      <ArrowRightOnRectangleIcon className="h-5 w-5 text-red-500" />
-                      <span className="sr-only">Logout</span>
-                    </Link>
-                  </li>
-                </>
-              ) : (
-                <li>
-                  <Link
-                    to="/login"
-                    className="flex items-center gap-2 px-2 py-1 rounded-sm text-sm border border-zinc-700"
-                    onClick={closeMenu} // Cerrar el menú al hacer clic en un enlace
-                  >
-                    <ArrowLeftOnRectangleIcon className="h-5 w-5 text-white" />
-                    <span className="sr-only">Login</span>
-                  </Link>
-                </li>
-              )}
-            </ul>
-          )}
+        {/* Hamburger Menu Icon for Small Screens */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <Bars3Icon className="h-8 w-8 text-gray-800" />
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-50">
+          <div className="flex flex-col space-y-4 px-8 py-6">
+            <Link to="/about" onClick={closeMenu} className="font-bold hover:text-blue-900">
+              Quiénes somos
+            </Link>
+            <Link to="/clients" onClick={closeMenu} className="font-bold hover:text-blue-900">
+              Nuestros clientes
+            </Link>
+            <Link to="/services" onClick={closeMenu} className="font-bold hover:text-blue-900">
+              Servicios
+            </Link>
+            <Link to="/contact" onClick={closeMenu} className="text-white bg-slate-800 rounded-md p-1 px-2 hover:bg-blue-900">
+              Contacto
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
 
 export default NavBar;
-

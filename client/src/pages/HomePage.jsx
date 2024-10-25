@@ -1,153 +1,196 @@
 import { EnvelopeIcon } from "@heroicons/react/24/solid"
+import CarruselClientes from "../components/CarruselClientes";
 
 const HomaPage = () => {
 
   return (
     <div className="flex flex-col pt-10">
       {/* Jumbotron Section */}
-      <div
-        className="h-screen w-full bg-center flex justify-center items-center">
+      <div className="relative h-screen w-full bg-center flex justify-center items-center">
+        {/* Video */}
         <video
-          className="max-w-full max-h-full lg:p-32"
+          className="w-full h-full object-cover"
           src={`${import.meta.env.BASE_URL}presentation.mp4`}
-          alt="Logo"
-          muted autoPlay loop
-        />
-      </div>
-
-      <div className="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/QInEq1z_1LI"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          autoPlay
           muted
+          autoPlay
           loop
-        ></iframe>
-      </div>
+        />
 
-      <div className="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://asset.cloudinary.com/dopqozfgb/70655cec83c70be498a2c875910c3d8e"
-          title="Cloudinary video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-
-
-
-      {/* Cards Section */}
-      <div className="container mx-auto py-32 px-4 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {/* Card 1 */}
-          <div className="h-full shadow-md border border-zinc-600 rounded-lg">
-            <img
-              src={`${import.meta.env.BASE_URL}global.jpg`}
-              alt="Project 1"
-              className="w-full h-64 object-cover rounded-t-lg"
-            />
-            <div className="p-4 md:p-6">
-              <h5 className="text-base md:text-xl font-semibold">CONSULTING</h5>
-              <br />
-              <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Projects Structuring</p>
-                <p className="text-xs md:text-sm">- Evaluation and Valuation of companies and projects</p>
-                <p className="text-xs md:text-sm">- Networking, Startups and angel investors</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="h-full shadow-md border border-zinc-600 rounded-lg">
-            <img
-              src={`${import.meta.env.BASE_URL}lightbulb.jpg`}
-              alt="Project 2"
-              className="w-full h-64 object-cover rounded-t-lg"
-            />
-            <div className="p-4 md:p-6">
-              <h5 className="text-base md:text-xl font-semibold">SOFTWARE DEVELOPMENT</h5>
-              <br />
-              <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Leverage for Environmental Investments</p>
-                <p className="text-xs md:text-sm">- Financial arbitraje with licensed entities</p>
-                <p className="text-xs md:text-sm">- International Commerce (Food and other commodities)</p>
-                <p className="text-xs md:text-sm">- Algorithmic trading and market analysis Software</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="h-full shadow-md border border-zinc-600 rounded-lg">
-            {/* <div className="h-full rounded-lg shadow-shadow-[0_0px_20px_rgba(0,100,0,0.3)]"> */}
-            <img
-              src={`${import.meta.env.BASE_URL}project.jpg`}
-              alt="Project 3"
-              className="w-full h-64 object-cover rounded-t-lg"
-            />
-            <div className="p-4 md:p-6">
-              <h5 className="text-base md:text-xl font-semibold">
-                PROJECTS
-              </h5>
-              <br />
-              <div className="flex flex-col space-y-3 text-left">
-                <p className="text-xs md:text-sm">- Structuring</p>
-                <p className="text-xs md:text-sm">- Implementation, support and management</p>
-                <p className="text-xs md:text-sm">- Promotion and marketing for fundraising</p>
-              </div>
-            </div>
-          </div>
+        {/* Overlay Content */}
+        <div className="absolute flex flex-col items-center text-center text-white">
+          <h1
+            className="text-4xl md:text-6xl font-bold mb-4"
+            style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
+          >
+            Inversiones Conti
+          </h1>
+          <p
+            className="text-lg md:text-2xl font-light"
+            style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
+          >
+            Empowering growth and innovation through strategic investments and consultancy.
+          </p>
         </div>
       </div>
 
       {/*About us*/}
-      <div className="border-y border-zinc-600 my-24">
-        <div className="container flex flex-col md:flex-row justify-center items-center mx-auto py-20 px-4 md:px-10">
-          <div className="flex-shrink-0 md:w-1/4 flex justify-center items-center">
-            <h2 className="text-lg md:text-xl font-bold text-center">About Us</h2>
+      <div className="md:my-32 text-sm md:text-base">
+      <div className="bg-slate-900 text-white">
+        <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+
+          <div className="md:w-2/3 pt-10 md:py-10">
+            <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
+            <p className="text-justify">
+              En Inversiones Conti, somos una firma líder dedicada a satisfacer las principales necesidades de nuestros
+              clientes a través de servicios profesionales que optimizan sus procesos administrativos, legales y fiscales.
+              Nuestro objetivo es mejorar la eficiencia operativa y maximizar los resultados, permitiendo que nuestros
+              clientes se enfoquen en los aspectos más estratégicos de su negocio.
+            </p>
+            <br />
+            <p className="text-justify">
+              Cada servicio que ofrecemos está a cargo de especialistas con amplia experiencia en su área, garantizando
+              un desempeño impecable y una ejecución precisa para asegurar el éxito en cada proyecto.
+            </p>
           </div>
-          <div className="md:w-3/4">
-            <p className="text-xs md:text-sm my-2">
-              We are a dedicated team of professionals committed to driving growth and innovation in business. Our mission is to provide comprehensive solutions in business consulting, software development, and project management.
-            </p>
-            <p className="text-xs md:text-sm my-2">
-              We focus on building strong relationships with our clients, understanding their unique needs, and crafting personalized strategies that deliver sustainable results. With expertise in project evaluation and international trade, we ensure our clients receive the support they need to thrive in a competitive environment.
-            </p>
-            <p className="text-xs md:text-sm my-2">
-              We believe in collaboration and transparency, working closely with our partners to achieve common goals while maximizing opportunities at every step.
-            </p>
+
+          <div className="flex-shrink-0 md:w-1/3 flex justify-center items-center">
+            <video
+              className="w-full h-full object-cover"
+              src={`${import.meta.env.BASE_URL}presentation.mp4`}
+              muted
+              autoPlay
+              loop
+            />
           </div>
         </div>
       </div>
 
+      {/*Mision & Vision*/}
+      <div className="bg-slate-100">
+        <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
 
+          <div className="md:w-2/3 pt-10 md:py-10">
+            <h2 className="font-bold md:text-xl">Misión</h2>
+            <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+              Somos una organización comprometida con nuestros clientes, aportando confianza y brindándoles compromiso, eficiencia y calidad en nuestros servicios, con el fin de hacer sus procesos administrativos y financieros más rentables ofreciendo soluciones integrales de acuerdo a las necesidades de su negocio.
+            </p>
+          </div>
+
+          {/* Barra divisoria */}
+          <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+          <div className="md:w-2/3 pb-10 md:py-10">
+            <h2 className="font-bold md:text-xl">Visión</h2>
+            <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+              Crear estrategias duraderas con nuestros proveedores y clientes para ser parte fundamental de la organización, brindándoles soluciones prácticas, efectivas y un servicio personalizado para que así ellos puedan enfocar su talento y recursos en crecer su negocio.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      </div>
+      
+
+      {/* Cards Section */}
+      <div className="container mx-auto px-4 md:px-40 my-16">
+        <h2 className="md:text-2xl font-bold text-center pb-16">Servicios</h2>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          {/* Card 1 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}global.jpg`}
+              alt="Consultoría en Planeación y Ejecución de Proyectos"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría en Planeación y Ejecución de Proyectos
+              </h5>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}lightbulb.jpg`}
+              alt="Consultoría Jurídica"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría Jurídica
+              </h5>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}project.jpg`}
+              alt="Consultoría Comercial"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría Comercial
+              </h5>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}finance.jpg`}
+              alt="Consultoría Financiera"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría Financiera
+              </h5>
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}digital.jpg`}
+              alt="Consultoría en Activos Digitales"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría en Activos Digitales
+              </h5>
+            </div>
+          </div>
+
+          {/* Card 6 */}
+          <div className="h-full shadow-md rounded-lg">
+            <img
+              src={`${import.meta.env.BASE_URL}it.jpg`}
+              alt="Consultoría Informática"
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4 md:p-6 flex justify-center">
+              <h5 className="text-base font-semibold text-blue-900 text-center">
+                Consultoría Informática
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/*Nuestros Clientes */}
+      <CarruselClientes></CarruselClientes>
 
 
       {/* Prefooter Section */}
-      <div
-        className="w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[400px]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to bottom, transparent, black),
-            linear-gradient(to top, transparent, black),
-            linear-gradient(to top, transparent, black),
-            url('${import.meta.env.BASE_URL}banner.webp')`,
-          backgroundSize: 'cover', // Ajusta el tamaño de fondo para cubrir el contenedor
-          backgroundRepeat: 'no-repeat', // Evita la repetición vertical y horizontal
-          backgroundPosition: 'center center' // Centra la imagen
-        }}
-      >
+      <div className="bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[400px]">
         <div className="px-4 md:px-8 lg:px-24">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             <div className="flex items-center justify-center">
-              <img className="h-48 md:h-64" src={`${import.meta.env.BASE_URL}logoT.png`} alt="Logo" />
+              <img className="h-12 md:h-32" src={`${import.meta.env.BASE_URL}logoIC.webp`} alt="Logo" />
             </div>
             <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
@@ -190,7 +233,7 @@ const HomaPage = () => {
         </div>
       </div>
       <footer className="bg-black text-white text-xs bottom-0 w-full text-center py-1">
-        <p>&copy; 2024 Panamerican Private Investments. All rights reserved.</p>
+        <p>&copy; 2024 Inversiones Conti. All rights reserved.</p>
       </footer>
     </div>
   );
