@@ -35,61 +35,61 @@ const HomaPage = () => {
 
       {/*About us*/}
       <div className="md:my-32 text-sm md:text-base">
-      <div className="bg-slate-900 text-white">
-        <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+        <div className="bg-slate-900 text-white">
+          <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
 
-          <div className="md:w-1/2 pt-10 md:py-10">
-            <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
-            <p className="text-justify">
-              En Inversiones Conti, somos una firma líder dedicada a satisfacer las principales necesidades de nuestros
-              clientes a través de servicios profesionales que optimizan sus procesos administrativos, legales y fiscales.
-              Nuestro objetivo es mejorar la eficiencia operativa y maximizar los resultados, permitiendo que nuestros
-              clientes se enfoquen en los aspectos más estratégicos de su negocio.
-            </p>
-            <br />
-            <p className="text-justify">
-              Cada servicio que ofrecemos está a cargo de especialistas con amplia experiencia en su área, garantizando
-              un desempeño impecable y una ejecución precisa para asegurar el éxito en cada proyecto.
-            </p>
+            <div className="md:w-1/2 pt-10 md:py-10">
+              <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
+              <p className="text-justify">
+                En Inversiones Conti, somos una firma líder dedicada a satisfacer las principales necesidades de nuestros
+                clientes a través de servicios profesionales que optimizan sus procesos administrativos, legales y fiscales.
+                Nuestro objetivo es mejorar la eficiencia operativa y maximizar los resultados, permitiendo que nuestros
+                clientes se enfoquen en los aspectos más estratégicos de su negocio.
+              </p>
+              <br />
+              <p className="text-justify">
+                Cada servicio que ofrecemos está a cargo de especialistas con amplia experiencia en su área, garantizando
+                un desempeño impecable y una ejecución precisa para asegurar el éxito en cada proyecto.
+              </p>
+            </div>
+
+            <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center">
+              <video
+                className="w-full h-full object-cover"
+                src={`${import.meta.env.BASE_URL}presentation.mp4`}
+                muted
+                autoPlay
+                loop
+              />
+            </div>
           </div>
+        </div>
 
-          <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center">
-            <video
-              className="w-full h-full object-cover"
-              src={`${import.meta.env.BASE_URL}presentation.mp4`}
-              muted
-              autoPlay
-              loop
-            />
+        {/*Mision & Vision*/}
+        <div className="bg-gradient-to-b from-white to-slate-200">
+          <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+
+            <div className="md:w-2/3 pt-10 md:py-10">
+              <h2 className="font-bold md:text-xl">Misión</h2>
+              <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                Somos una organización comprometida con nuestros clientes, aportando confianza y brindándoles compromiso, eficiencia y calidad en nuestros servicios, con el fin de hacer sus procesos administrativos y financieros más rentables ofreciendo soluciones integrales de acuerdo a las necesidades de su negocio.
+              </p>
+            </div>
+
+            {/* Barra divisoria */}
+            <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+            <div className="md:w-2/3 pb-10 md:py-10">
+              <h2 className="font-bold md:text-xl">Visión</h2>
+              <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                Crear estrategias duraderas con nuestros proveedores y clientes para ser parte fundamental de la organización, brindándoles soluciones prácticas, efectivas y un servicio personalizado para que así ellos puedan enfocar su talento y recursos en crecer su negocio.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
 
-      {/*Mision & Vision*/}
-      <div className="bg-gradient-to-b from-white to-slate-200">
-        <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
-
-          <div className="md:w-2/3 pt-10 md:py-10">
-            <h2 className="font-bold md:text-xl">Misión</h2>
-            <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-              Somos una organización comprometida con nuestros clientes, aportando confianza y brindándoles compromiso, eficiencia y calidad en nuestros servicios, con el fin de hacer sus procesos administrativos y financieros más rentables ofreciendo soluciones integrales de acuerdo a las necesidades de su negocio.
-            </p>
-          </div>
-
-          {/* Barra divisoria */}
-          <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
-
-          <div className="md:w-2/3 pb-10 md:py-10">
-            <h2 className="font-bold md:text-xl">Visión</h2>
-            <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-              Crear estrategias duraderas con nuestros proveedores y clientes para ser parte fundamental de la organización, brindándoles soluciones prácticas, efectivas y un servicio personalizado para que así ellos puedan enfocar su talento y recursos en crecer su negocio.
-            </p>
-          </div>
-
-        </div>
-      </div>
-      </div>
-      
 
       {/* Cards Section */}
       <div className="container mx-auto px-4 md:px-20 mb-32">
@@ -98,7 +98,7 @@ const HomaPage = () => {
           {/* Card 1 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}global.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi1.jpg`}
               alt="Consultoría en Planeación y Ejecución de Proyectos"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -112,7 +112,7 @@ const HomaPage = () => {
           {/* Card 2 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}lightbulb.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi2.jpg`}
               alt="Consultoría Jurídica"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -126,7 +126,7 @@ const HomaPage = () => {
           {/* Card 3 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}project.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi3.jpg`}
               alt="Consultoría Comercial"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -140,7 +140,7 @@ const HomaPage = () => {
           {/* Card 4 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}finance.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi4.jpg`}
               alt="Consultoría Financiera"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -154,7 +154,7 @@ const HomaPage = () => {
           {/* Card 5 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}digital.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi5.jpg`}
               alt="Consultoría en Activos Digitales"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -168,7 +168,7 @@ const HomaPage = () => {
           {/* Card 6 */}
           <div className="h-full shadow-md rounded-lg">
             <img
-              src={`${import.meta.env.BASE_URL}it.jpg`}
+              src={`${import.meta.env.BASE_URL}ofi6.jpg`}
               alt="Consultoría Informática"
               className="w-full h-48 object-cover rounded-t-lg"
             />
@@ -184,53 +184,12 @@ const HomaPage = () => {
       {/*Nuestros Clientes */}
       <CarruselClientes></CarruselClientes>
 
-      <div className="bg-gradient-to-b from-white to-slate-200">
-  <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
-
-    <div className="md:w-2/3 pt-10 md:py-20">
-      <h2 className="font-bold md:text-xl">100+ Clientes Satisfechos</h2>
-      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-        Confiamos en relaciones sólidas y duraderas, brindando una experiencia satisfactoria a cada cliente.
-      </p>
-    </div>
-
-    {/* Barra divisoria */}
-    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
-
-    <div className="md:w-2/3 pt-10 md:py-10">
-      <h2 className="font-bold md:text-xl">200+ Proyectos Ejecutados</h2>
-      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-        Más de 200 proyectos completados con éxito, garantizando profesionalismo y calidad en cada etapa.
-      </p>
-    </div>
-
-    {/* Barra divisoria */}
-    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
-
-    <div className="md:w-2/3 pt-10 md:py-10">
-      <h2 className="font-bold md:text-xl">Cobertura en 15+ Sectores</h2>
-      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-        Ofrecemos soluciones personalizadas para diversas industrias, adaptándonos a las necesidades específicas de cada sector.
-      </p>
-    </div>
-
-    {/* Barra divisoria */}
-    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
-
-    <div className="md:w-2/3 pb-10 md:py-10">
-      <h2 className="font-bold md:text-xl">95% Retención de Clientes</h2>
-      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-        Nuestra dedicación y calidad se reflejan en un alto índice de retención de clientes año tras año.
-      </p>
-    </div>
-
-  </div>
-</div>
+      
 
 
 
       {/* Prefooter Section */}
-      <div className="bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[400px]">
+      <div className="bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[200px]">
         <div className="px-4 md:px-8 lg:px-24">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             <div className="flex items-center justify-center">
@@ -269,7 +228,7 @@ const HomaPage = () => {
                   Address: Cra 43A #3 Sur -130, Torre 2, Oficina 915 <br />
                   CE Milla de Oro, Medellín, Antioquia
                 </p>
-                
+
               </div>
             </div>
           </div>
