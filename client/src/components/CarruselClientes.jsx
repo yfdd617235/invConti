@@ -4,20 +4,20 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 function CarruselClientes() {
     const items = [
         {
-            img: "imagen1.jpg", // Asegúrate de que estas imágenes estén disponibles en tu proyecto
+            img: `${import.meta.env.BASE_URL}calidad.png`,
             text: "Compromiso de calidad en cada servicio ofrecido.",
         },
         {
-            img: "imagen2.jpg",
+            img: `${import.meta.env.BASE_URL}cartelera.png`,
             text: "Garantía de satisfacción en cada proyecto.",
         },
         {
-            img: "imagen3.jpg",
+            img: `${import.meta.env.BASE_URL}persona.png`,
             text: "Atención personalizada y compromiso constante.",
         },
         {
-            img: "imagen4.jpg",
-            text: "Atención personalizada y compromiso constante.",
+            img: `${import.meta.env.BASE_URL}team.png`,
+            text: "Colaboración efectiva que potencia nuestros servicios.",
         },
     ];
 
@@ -27,7 +27,7 @@ function CarruselClientes() {
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
-        }, 4000);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
@@ -44,15 +44,15 @@ function CarruselClientes() {
     };
 
     return (
-        <div className="bg-slate-100 p-8">
-            <div className="container md:mx-10 flex flex-col md:flex-row gap-8 justify-center items-center">
+        <div className="bg-slate-950 flex items-center justify-center py-10">
+            <div className="container flex flex-col gap-4 items-center px-4 md:px-20">
                 {/* Columna izquierda */}
-                <div className="md:w-1/4 w-full text-center md:text-left">
-                    <h2 className="text-2xl font-bold text-blue-900">Nuestros Clientes</h2>
+                <div className=" h-100 w-full text-center">
+                    <h2 className="text-2xl font-bold text-white">Nuestros Clientes</h2>
                 </div>
 
                 {/* Columna derecha (Carrusel) */}
-                <div className="md:w-3/4 w-full relative">
+                <div className="relative">
                     <div className="relative overflow-hidden">
                         {/* Contenedor del item actual */}
                         <div
@@ -62,32 +62,32 @@ function CarruselClientes() {
                             {items.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md"
+                                    className="flex-shrink-0 w-full flex justify-center items-center p-4 rounded-lg shadow-md"
                                 >
                                     <img
                                         src={item.img}
                                         alt={`Imagen ${index + 1}`}
-                                        className="w-16 h-16 mr-4 rounded-full object-cover"
+                                        className="w-20 h-20 p-2 mr-6 object-cover bg-slate-300 rounded-md"
                                     />
-                                    <p className="text-gray-700 text-lg">{item.text}</p>
+                                    <p className="text-slate-300 text-lg">{item.text}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* Flechas de control */}
-                    {/* <button
+                    <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-blue-900 text-white rounded-full shadow-md hover:bg-blue-800"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white rounded-full shadow-md hover:bg-slate-700"
           >
             <ChevronLeftIcon className="h-6 w-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-blue-900 text-white rounded-full shadow-md hover:bg-blue-800"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white rounded-full shadow-md hover:bg-slate-700"
           >
             <ChevronRightIcon className="h-6 w-6" />
-          </button> */}
+          </button>
                 </div>
             </div>
         </div>

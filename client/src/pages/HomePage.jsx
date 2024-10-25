@@ -38,7 +38,7 @@ const HomaPage = () => {
       <div className="bg-slate-900 text-white">
         <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
 
-          <div className="md:w-2/3 pt-10 md:py-10">
+          <div className="md:w-1/2 pt-10 md:py-10">
             <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
             <p className="text-justify">
               En Inversiones Conti, somos una firma líder dedicada a satisfacer las principales necesidades de nuestros
@@ -53,7 +53,7 @@ const HomaPage = () => {
             </p>
           </div>
 
-          <div className="flex-shrink-0 md:w-1/3 flex justify-center items-center">
+          <div className="flex-shrink-0 md:w-1/2 flex justify-center items-center">
             <video
               className="w-full h-full object-cover"
               src={`${import.meta.env.BASE_URL}presentation.mp4`}
@@ -66,7 +66,7 @@ const HomaPage = () => {
       </div>
 
       {/*Mision & Vision*/}
-      <div className="bg-slate-100">
+      <div className="bg-gradient-to-b from-white to-slate-200">
         <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
 
           <div className="md:w-2/3 pt-10 md:py-10">
@@ -92,7 +92,7 @@ const HomaPage = () => {
       
 
       {/* Cards Section */}
-      <div className="container mx-auto px-4 md:px-40 my-16">
+      <div className="container mx-auto px-4 md:px-20 mb-32">
         <h2 className="md:text-2xl font-bold text-center pb-16">Servicios</h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Card 1 */}
@@ -184,6 +184,50 @@ const HomaPage = () => {
       {/*Nuestros Clientes */}
       <CarruselClientes></CarruselClientes>
 
+      <div className="bg-gradient-to-b from-white to-slate-200">
+  <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+
+    <div className="md:w-2/3 pt-10 md:py-20">
+      <h2 className="font-bold md:text-xl">100+ Clientes Satisfechos</h2>
+      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+        Confiamos en relaciones sólidas y duraderas, brindando una experiencia satisfactoria a cada cliente.
+      </p>
+    </div>
+
+    {/* Barra divisoria */}
+    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+    <div className="md:w-2/3 pt-10 md:py-10">
+      <h2 className="font-bold md:text-xl">200+ Proyectos Ejecutados</h2>
+      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+        Más de 200 proyectos completados con éxito, garantizando profesionalismo y calidad en cada etapa.
+      </p>
+    </div>
+
+    {/* Barra divisoria */}
+    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+    <div className="md:w-2/3 pt-10 md:py-10">
+      <h2 className="font-bold md:text-xl">Cobertura en 15+ Sectores</h2>
+      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+        Ofrecemos soluciones personalizadas para diversas industrias, adaptándonos a las necesidades específicas de cada sector.
+      </p>
+    </div>
+
+    {/* Barra divisoria */}
+    <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
+
+    <div className="md:w-2/3 pb-10 md:py-10">
+      <h2 className="font-bold md:text-xl">95% Retención de Clientes</h2>
+      <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+        Nuestra dedicación y calidad se reflejan en un alto índice de retención de clientes año tras año.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
 
       {/* Prefooter Section */}
       <div className="bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[400px]">
@@ -194,31 +238,18 @@ const HomaPage = () => {
             </div>
             <div className="flex items-center justify-left m-6">
               <div className="flex flex-col space-y-3 text-left">
-                <h5 className="text-xs md:text-sm lg:text-lg font-bold">Services</h5> <br />
-                <p className="text-xs md:text-sm ">- Trading and financial investments</p>
-                <p className="text-xs md:text-sm ">- Project evaluation, structuring and management</p>
-                <p className="text-xs md:text-sm ">- International business consulting</p>
-                <p className="text-xs md:text-sm ">- Software and Artificial Intelligence development</p>
-              </div>
-            </div>
-            <div className="flex items-center justify-left m-6">
-              <div className="flex flex-col space-y-3 text-left">
-                <h5 className="text-xs md:text-sm lg:text-lg font-bold">Contact Us</h5> <br />
-                <p className="text-xs md:text-sm ">
-                  Address: Cra 42 C #3 Sur 81, Torre 1, Piso 15 <br />
-                  CE Milla de Oro, Medellín Colombia
-                </p>
+                <h5 className="text-xs md:text-sm lg:text-lg font-bold">Contacto</h5> <br />
                 <a
-                  href="mailto:director@panamericanprivateinvestments.com"
+                  href="mailto:gerencia@inversionesconti.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-xs md:text-sm"
                 >
                   <EnvelopeIcon className="w-4 h-4 text-white" /> {/* Ícono de Heroicons v2 */}
-                  <span>director@panamericanprivateinvestments.com</span>
+                  <span>gerencia@inversionesconti.com</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/panamerican-private-investments/?viewAsMember=true"
+                  href="https://es.linkedin.com/company/conti"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-xs md:text-sm">
@@ -227,6 +258,18 @@ const HomaPage = () => {
                   </svg>
                   <span>LinkedIn</span>
                 </a>
+                {/* <p className="text-xs md:text-sm ">- xxxxxxxxxxxxxxxxxxxxx</p>
+                <p className="text-xs md:text-sm ">- xxxxxxxxxxxxxxxxxxxxx</p> */}
+              </div>
+            </div>
+            <div className="flex items-center justify-left m-6">
+              <div className="flex flex-col space-y-3 text-left">
+                <h5 className="text-xs md:text-sm lg:text-lg font-bold">Ubicación</h5> <br />
+                <p className="text-xs md:text-sm ">
+                  Address: Cra 43A #3 Sur -130, Torre 2, Oficina 915 <br />
+                  CE Milla de Oro, Medellín, Antioquia
+                </p>
+                
               </div>
             </div>
           </div>
