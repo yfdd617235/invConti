@@ -34,7 +34,7 @@ const HomaPage = () => {
         <video
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
           src={`${import.meta.env.BASE_URL}building.mp4`}
-          // poster={`${import.meta.env.BASE_URL}building.png`}
+          poster={`${import.meta.env.BASE_URL}building.png`}
           muted
           autoPlay
           loop
@@ -43,7 +43,7 @@ const HomaPage = () => {
         />
 
         {/* Poster Image as Fallback */}
-        <img
+        {/* <img
           src={`${import.meta.env.BASE_URL}building.png`}
           alt="Video Poster"
           className="absolute w-full h-full object-cover bg-blue-800 opacity-30"
@@ -54,13 +54,13 @@ const HomaPage = () => {
               e.target.style.display = 'block';
             }
           }}
-        />
+        /> */}
 
         {/* Fondo negro con opacidad */}
         <div className="absolute top-0 left-0 w-full h-full bg-blue-800 opacity-30 -z-10" />
 
         {/* Logo */}
-        <div className="absolute flex flex-col items-center text-white">
+        <div className="absolute flex flex-col px-6 items-center text-white">
           <h1
             className="text-4xl md:text-6xl font-bold mb-4"
             style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
@@ -68,7 +68,7 @@ const HomaPage = () => {
             Inversiones Conti
           </h1>
           <p
-            className="text-lg md:text-2xl font-light"
+            className="text-lg md:text-2xl font-light text-justify"
             style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
           >
             Impulsando el crecimiento y la innovación a través de inversiones estratégicas y asesoría experta.
