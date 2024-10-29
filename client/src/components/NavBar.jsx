@@ -26,11 +26,11 @@ function NavBar() {
       <div className="flex justify-between items-center h-full px-10">
         {/* Logo */}
         <Link to="home" smooth={true} duration={1000} className="cursor-pointer">
-          <div className="h-12 overflow-hidden">
+          <div className="h-14">
             <img
               src={`${import.meta.env.BASE_URL}logoIC.webp`}
               alt="PPI"
-              className="h-full w-full object-cover object-center scale-125"
+              className="h-full w-full object-contain object-center "
             />
           </div>
         </Link>
