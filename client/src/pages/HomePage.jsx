@@ -4,7 +4,7 @@ import CarruselClientes from "../components/CarruselClientes";
 const HomaPage = () => {
 
   return (
-    <div className="flex flex-col pt-10">
+    <div className="scroll-snap-container flex flex-col pt-10">
       {/* Jumbotron Section */}
       {/* <div className="relative h-screen w-full bg-center flex justify-center items-center">
         <video
@@ -30,7 +30,7 @@ const HomaPage = () => {
           </p>
         </div>
       </div> */}
-      <div className="relative h-screen w-full flex justify-center items-center overflow-hidden">
+      <div className="snap-section relative h-screen w-full flex justify-center items-center overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover -z-20"
           src={`${import.meta.env.BASE_URL}building.mp4`}
@@ -80,7 +80,7 @@ const HomaPage = () => {
       </div>
 
       {/*About us*/}
-      <div className="md:my-32 text-sm md:text-base">
+      <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
         <div className="bg-slate-900 text-white">
           <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
 
@@ -138,7 +138,7 @@ const HomaPage = () => {
 
 
       {/* Cards Section */}
-      <div className="container mx-auto px-4 md:px-20 mb-32">
+      <div id="services" className="snap-section section container mx-auto px-4 md:px-20 mb-32">
         <h2 className="text-lg md:text-2xl font-bold text-center py-16">Servicios</h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Card 1 */}
@@ -234,10 +234,13 @@ const HomaPage = () => {
       </div>
 
       {/*Nuestros Clientes */}
-      <CarruselClientes></CarruselClientes>
+      <div id="clients" className="snap-section section">
+      <CarruselClientes/>
+      </div>
+      
 
       {/* Prefooter Section */}
-      <div className="bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[200px]">
+      <div id="contact" className="snap-section section bg-black text-white w-full text-left mt-16 p-4 md:p-8 bg-repeat bg-center min-h-[200px]">
         <div className="px-4 md:px-32 lg:px-48">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="flex items-center justify-center">
