@@ -25,7 +25,7 @@ function NavBar() {
     <nav className="bg-white h-16 fixed top-0 w-full py-0 z-50 shadow-md">
       <div className="flex justify-between items-center h-full px-10">
         {/* Logo */}
-        <Link to="/" smooth={true} duration={500}>
+        <Link to="home" smooth={true} duration={1000} className="cursor-pointer">
           <div className="h-12 overflow-hidden">
             <img
               src={`${import.meta.env.BASE_URL}logoIC.webp`}

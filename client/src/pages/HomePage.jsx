@@ -36,7 +36,7 @@ const HomaPage = () => {
 
 
       <div className="scroll-snap-container flex flex-col pt-10">
-        <div className="snap-section relative h-screen w-full flex justify-center items-center overflow-hidden">
+        <div id="home" className="snap-section relative h-screen w-full flex justify-center items-center overflow-hidden">
           <video
             className="absolute top-0 left-0 w-full h-full object-cover -z-20"
             src={`${import.meta.env.BASE_URL}building.mp4`}
