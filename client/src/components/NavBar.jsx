@@ -37,19 +37,19 @@ function NavBar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-10 items-center">
-          <Link to="about" smooth={true} duration={500} className="font-bold hover:text-blue-900 relative group">
+          <Link to="about" smooth={true} duration={1000} className="cursor-pointer font-bold hover:text-blue-900 relative group">
             Quiénes somos
             <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to="clients" smooth={true} duration={500} className="font-bold hover:text-blue-900 relative group">
+          <Link to="clients" smooth={true} duration={1000} className="cursor-pointer font-bold hover:text-blue-900 relative group">
             Nuestros clientes
             <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to="services" smooth={true} duration={500} className="font-bold hover:text-blue-900 relative group">
+          <Link to="services" smooth={true} duration={1000} className="cursor-pointer font-bold hover:text-blue-900 relative group">
             Servicios
             <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to="contact" smooth={true} duration={500} className="text-white hover:bg-blue-900 relative group bg-slate-800 rounded-md p-1 px-2">
+          <Link to="contact" smooth={true} duration={1000} className="cursor-pointer text-white hover:bg-blue-900 relative group bg-slate-800 rounded-md p-1 px-2">
             Contacto
           </Link>
         </div>
@@ -66,16 +66,16 @@ function NavBar() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-50">
           <div className="flex flex-col space-y-4 px-8 py-6">
-            <Link to="about" smooth={true} duration={500} onClick={closeMenu} className="font-bold hover:text-blue-900">
+            <Link to="about" smooth={true} duration={1000} onClick={closeMenu} className="font-bold hover:text-blue-900">
               Quiénes somos
             </Link>
-            <Link to="clients" smooth={true} duration={500} onClick={closeMenu} className="font-bold hover:text-blue-900">
+            <Link to="clients" smooth={true} duration={1000} onClick={closeMenu} className="font-bold hover:text-blue-900">
               Nuestros clientes
             </Link>
-            <Link to="services" smooth={true} duration={500} onClick={closeMenu} className="font-bold hover:text-blue-900">
+            <Link to="services" smooth={true} duration={1000} onClick={closeMenu} className="font-bold hover:text-blue-900">
               Servicios
             </Link>
-            <Link to="contact" smooth={true} duration={500} onClick={closeMenu} className="text-white bg-slate-800 rounded-md p-1 px-2 hover:bg-blue-900">
+            <Link to="contact" smooth={true} duration={1000} onClick={closeMenu} className="text-white bg-slate-800 rounded-md p-1 px-2 hover:bg-blue-900">
               Contacto
             </Link>
           </div>

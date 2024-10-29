@@ -40,7 +40,7 @@ const HomaPage = () => {
             <video
               className="absolute top-0 left-0 w-full h-full object-cover -z-20"
               src={`${import.meta.env.BASE_URL}building.mp4`}
-              // poster={`${import.meta.env.BASE_URL}building.png`}
+              poster={`${import.meta.env.BASE_URL}building.png`}
               muted
               autoPlay
               loop
@@ -54,7 +54,7 @@ const HomaPage = () => {
                 e.target.style.display = 'none';
                 setElementsToLoad((prev) => prev - 1); // Asegúrate de disminuir el contador si hay un error
               }}
-            />
+            >Your browser does not support the video tag.</video>
 
             {/* Poster Image as Fallback */}
             {/* <img
