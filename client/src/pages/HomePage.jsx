@@ -194,7 +194,7 @@ const HomaPage = () => {
         image: "ofi6.jpg",
       },
     ].map((card, index) => (
-      <div key={index} className="h-full shadow-md rounded-lg relative group overflow-hidden">
+      <div key={index} className="h-full shadow-md rounded-lg relative group overflow-hidden hover:scale-110">
         {/* Image */}
         <img
           src={`${import.meta.env.BASE_URL}${card.image}`}
