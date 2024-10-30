@@ -157,101 +157,69 @@ const HomaPage = () => {
         </div>
 
 
-        {/* Cards Section */}
-        <div id="services" className="snap-section section container mx-auto px-4 md:px-20 mb-32">
-          <h2 className="text-lg md:text-2xl font-bold text-center py-16">Servicios</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            {/* Card 1 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi1.jpg`}
-                alt="Consultoría en Planeación y Ejecución de Proyectos"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría en Planeación y Ejecución de Proyectos
-                </h5>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi2.jpg`}
-                alt="Consultoría Jurídica"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría Jurídica
-                </h5>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi3.jpg`}
-                alt="Consultoría Comercial"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría Comercial
-                </h5>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi4.jpg`}
-                alt="Consultoría Financiera"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría Financiera
-                </h5>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi5.jpg`}
-                alt="Consultoría en Activos Digitales"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría en Activos Digitales
-                </h5>
-              </div>
-            </div>
-
-            {/* Card 6 */}
-            <div className="h-full shadow-md rounded-lg">
-              <img
-                src={`${import.meta.env.BASE_URL}ofi6.jpg`}
-                alt="Consultoría Informática"
-                className="w-full h-48 object-cover rounded-t-lg"
-
-              />
-              <div className="p-4 md:p-6 flex justify-center">
-                <h5 className="text-base font-semibold text-blue-900 text-center">
-                  Consultoría Informática
-                </h5>
-              </div>
-            </div>
-          </div>
+    {/* Cards Section */}
+<div id="services" className="snap-section section container mx-auto px-4 md:px-20 mb-32">
+  <h2 className="text-lg md:text-2xl font-bold text-center py-16">Servicios</h2>
+  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+    {/* Card Template */}
+    {[
+      {
+        title: "Consultoría en Planeación y Ejecución de Proyectos",
+        description: "Ayudamos a planificar y ejecutar proyectos desde el análisis inicial hasta su cierre, asegurando el éxito en cada etapa mediante estrategias personalizadas y soluciones prácticas.",
+        image: "ofi1.jpg",
+      },
+      {
+        title: "Consultoría Jurídica",
+        description: "Ofrecemos asesoramiento jurídico especializado para empresas y particulares, apoyando en la toma de decisiones informadas, la gestión de riesgos y el cumplimiento de normativas vigentes.",
+        image: "ofi2.jpg",
+      },
+      {
+        title: "Consultoría Comercial",
+        description: "Desarrollamos estrategias comerciales que permiten a nuestros clientes identificar y aprovechar oportunidades de mercado, mejorar sus ventas y consolidar su posición en el sector.",
+        image: "ofi3.jpg",
+      },
+      {
+        title: "Consultoría Financiera",
+        description: "Brindamos asesoramiento financiero integral para optimizar recursos, aumentar la rentabilidad y ayudar a nuestros clientes a tomar decisiones económicas informadas y sostenibles.",
+        image: "ofi4.jpg",
+      },
+      {
+        title: "Consultoría en Activos Digitales",
+        description: "Asesoramos en la gestión y expansión de activos digitales, facilitando una presencia efectiva y segura en el entorno digital, aprovechando al máximo las nuevas tecnologías y tendencias.",
+        image: "ofi5.jpg",
+      },
+      {
+        title: "Consultoría Informática",
+        description: "Ofrecemos soluciones tecnológicas avanzadas para optimizar los procesos internos, mejorar la eficiencia operativa y apoyar la transformación digital de las empresas.",
+        image: "ofi6.jpg",
+      },
+    ].map((card, index) => (
+      <div key={index} className="h-full shadow-md rounded-lg relative group overflow-hidden">
+        {/* Image */}
+        <img
+          src={`${import.meta.env.BASE_URL}${card.image}`}
+          alt={card.title}
+          className="w-full h-48 object-cover rounded-t-lg transition-opacity duration-1000 group-hover:opacity-0"
+        />
+        {/* Title (visible initially) */}
+        <div className="p-4 md:p-6 text-center">
+          <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
         </div>
+        {/* Description (hidden until hover) */}
+        <div className="p-4 md:p-6 absolute inset-0 bg-white flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
+          <p className="text-sm md:text-base text-gray-700 mt-2 text-justify">{card.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
 
         {/*Nuestros Clientes */}
         <div id="clients" className="snap-section section">
