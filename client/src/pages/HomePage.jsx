@@ -73,7 +73,7 @@ const HomaPage = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-30 -z-10" />
 
           {/* Logo */}
-          {/* <div className="absolute flex flex-col px-6 items-center text-white">
+          <div className="absolute flex flex-col px-6 items-center text-white">
             <h1
               className="text-4xl md:text-6xl font-bold mb-4"
               style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
@@ -86,11 +86,8 @@ const HomaPage = () => {
             >
               Impulsando el crecimiento y la innovación a través de inversiones estratégicas y asesoría experta.
             </p>
-          </div> */}
-
-          {/* Imagen de fondo para móviles */}
-          {/* <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center md:hidden -z-20" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}banner.webp')` }}></div> */}
-        </div>
+          </div>
+         </div>
 
         {/*About us*/}
         <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
