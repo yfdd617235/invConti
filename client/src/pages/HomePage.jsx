@@ -2,11 +2,13 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import CarruselClientes from "../components/CarruselClientes";
 import React, { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
+import { useTranslation } from 'react-i18next';
 
 const HomaPage = () => {
 
   const [loading, setLoading] = useState(true);
   const [elementsToLoad, setElementsToLoad] = useState(1); // Ajusta según la cantidad total de elementos multimedia
+  const { t } = useTranslation();
 
   // Maneja la carga de cada elemento
   const handleLoad = () => {
@@ -84,7 +86,7 @@ const HomaPage = () => {
               className="text-lg md:text-2xl font-light text-justify"
               style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 1)" }}
             >
-              Impulsando el crecimiento y la innovación a través de inversiones estratégicas y asesoría experta.
+              {t('jumbotron.message')}
             </p>
           </div>
          </div>
@@ -95,17 +97,13 @@ const HomaPage = () => {
             <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
 
               <div className="md:w-1/2 pt-10 md:py-10">
-                <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
+                <h2 className="md:text-2xl font-bold text-center">{t('whoarewe.whoarewe')}</h2> <br />
                 <p className="text-justify">
-                  En Inversiones Conti, somos una firma líder dedicada a satisfacer las principales necesidades de nuestros
-                  clientes a través de servicios profesionales que optimizan sus procesos administrativos, legales y fiscales.
-                  Nuestro objetivo es mejorar la eficiencia operativa y maximizar los resultados, permitiendo que nuestros
-                  clientes se enfoquen en los aspectos más estratégicos de su negocio.
+                  {t('whoarewe.whoarewetext1')}
                 </p>
                 <br />
                 <p className="text-justify">
-                  Cada servicio que ofrecemos está a cargo de especialistas con amplia experiencia en su área, garantizando
-                  un desempeño impecable y una ejecución precisa para asegurar el éxito en cada proyecto.
+                {t('whoarewe.whoarewetext2')}
                 </p>
               </div>
 
@@ -133,9 +131,9 @@ const HomaPage = () => {
             <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
 
               <div className="md:w-2/3 pt-10 md:py-10">
-                <h2 className="font-bold md:text-xl">Misión</h2>
+                <h2 className="font-bold md:text-xl">{t('whoarewe.mission')}</h2>
                 <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                  Somos una organización comprometida con nuestros clientes, aportando confianza y brindándoles compromiso, eficiencia y calidad en nuestros servicios, con el fin de hacer sus procesos administrativos y financieros más rentables ofreciendo soluciones integrales de acuerdo a las necesidades de su negocio.
+                {t('whoarewe.missiontext')}
                 </p>
               </div>
 
@@ -143,9 +141,9 @@ const HomaPage = () => {
               <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
 
               <div className="md:w-2/3 pb-10 md:py-10">
-                <h2 className="font-bold md:text-xl">Visión</h2>
+                <h2 className="font-bold md:text-xl">{t('whoarewe.vision')}</h2>
                 <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                  Crear estrategias duraderas con nuestros proveedores y clientes para ser parte fundamental de la organización, brindándoles soluciones prácticas, efectivas y un servicio personalizado para que así ellos puedan enfocar su talento y recursos en crecer su negocio.
+                {t('whoarewe.visiontext')}
                 </p>
               </div>
 
@@ -161,33 +159,33 @@ const HomaPage = () => {
     {/* Card Template */}
     {[
       {
-        title: "Consultoría en Planeación y Ejecución de Proyectos",
-        description: "Ayudamos a planificar y ejecutar proyectos desde el análisis inicial hasta su cierre, asegurando el éxito en cada etapa mediante estrategias personalizadas y soluciones prácticas.",
+        title: t('services.card1title'),
+        description: t('services.card1text'),
         image: "ofi1.jpg",
       },
       {
-        title: "Consultoría Jurídica",
-        description: "Ofrecemos asesoramiento jurídico especializado para empresas y particulares, apoyando en la toma de decisiones informadas, la gestión de riesgos y el cumplimiento de normativas vigentes.",
+        title: t('services.card2title'),
+        description: t('services.card2text'),
         image: "ofi2.jpg",
       },
       {
-        title: "Consultoría Comercial",
-        description: "Desarrollamos estrategias comerciales que permiten a nuestros clientes identificar y aprovechar oportunidades de mercado, mejorar sus ventas y consolidar su posición en el sector.",
+        title: t('services.card3title'),
+        description: t('services.card3text'),
         image: "ofi3.jpg",
       },
       {
-        title: "Consultoría Financiera",
-        description: "Brindamos asesoramiento financiero integral para optimizar recursos, aumentar la rentabilidad y ayudar a nuestros clientes a tomar decisiones económicas informadas y sostenibles.",
+        title: t('services.card4title'),
+        description: t('services.card4text'),
         image: "ofi4.jpg",
       },
       {
-        title: "Consultoría en Activos Digitales",
-        description: "Asesoramos en la gestión y expansión de activos digitales, facilitando una presencia efectiva y segura en el entorno digital, aprovechando al máximo las nuevas tecnologías y tendencias.",
+        title: t('services.card5title'),
+        description: t('services.card5text'),
         image: "ofi5.jpg",
       },
       {
-        title: "Consultoría Informática",
-        description: "Ofrecemos soluciones tecnológicas avanzadas para optimizar los procesos internos, mejorar la eficiencia operativa y apoyar la transformación digital de las empresas.",
+        title: t('services.card6title'),
+        description: t('services.card6text'),
         image: "ofi6.jpg",
       },
     ].map((card, index) => (
@@ -211,11 +209,6 @@ const HomaPage = () => {
     ))}
   </div>
 </div>
-
-
-
-
-
 
 
         {/*Nuestros Clientes */}

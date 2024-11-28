@@ -10,6 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import { TaskProvider } from "./context/TasksContext";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import './i18n/i18n'
 
 function App() {
   return (

@@ -1,35 +1,49 @@
 import { useState, useEffect } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from 'react-i18next';
 
 function CarruselClientes() {
-    const items = [
-        {
-            img: `${import.meta.env.BASE_URL}calidad.png`,
-            text: "Compromiso de calidad en cada servicio ofrecido.",
-        },
-        {
-            img: `${import.meta.env.BASE_URL}cartelera.png`,
-            text: "Garantía de satisfacción en cada proyecto.",
-        },
-        {
-            img: `${import.meta.env.BASE_URL}persona.png`,
-            text: "Atención personalizada y compromiso constante.",
-        },
-        {
-            img: `${import.meta.env.BASE_URL}team.png`,
-            text: "Colaboración efectiva que potencia nuestros servicios.",
-        },
-    ];
+
+    const { t } = useTranslation();
+    const [items, setItems] = useState([]); // Inicialización correcta del estado
+
+    // Se actualizan los items solo cuando las traducciones estén listas
+    useEffect(() => {
+        const updatedItems = [
+            {
+                img: `${import.meta.env.BASE_URL}calidad.png`,
+                text: t('ourcustomers.carruseltext1'),
+            },
+            {
+                img: `${import.meta.env.BASE_URL}cartelera.png`,
+                text: t('ourcustomers.carruseltext2'),
+            },
+            {
+                img: `${import.meta.env.BASE_URL}persona.png`,
+                text: t('ourcustomers.carruseltext3'),
+            },
+            {
+                img: `${import.meta.env.BASE_URL}team.png`,
+                text: t('ourcustomers.carruseltext4'),
+            },
+        ];
+
+        if (updatedItems.every(item => item.text)) {  // Aseguramos que las traducciones están listas
+            setItems(updatedItems);
+        }
+    }, [t]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Cambiar al siguiente item automáticamente cada 3 segundos
+    // Cambiar al siguiente item automáticamente cada 3 segundos solo cuando los items estén disponibles
     useEffect(() => {
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
+        if (items.length > 0) {  // Aseguramos que items tiene datos
+            const interval = setInterval(() => {
+                nextSlide();
+            }, 3000);
+            return () => clearInterval(interval);  // Limpieza del intervalo
+        }
+    }, [items]);  // Ejecutar solo cuando los items cambien
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) =>
@@ -48,7 +62,7 @@ function CarruselClientes() {
             <div className="bg-slate-950 flex items-center justify-center py-10">
                 <div className="container flex flex-col gap-10 items-center px-4 xl:px-20">
                     <div className="h-100 w-full text-center">
-                        <h2 className="text-2xl font-bold text-white">Nuestros Clientes</h2>
+                        <h2 className="text-2xl font-bold text-white">{t('ourcustomers.title')}</h2>
                     </div>
                     {/* Carrusel */}
                     <div className="relative">
@@ -93,11 +107,9 @@ function CarruselClientes() {
                 </div>
             </div>
 
-
-            {/*Estadistica clientes */}
+            {/* Estadística clientes */}
             <div className="bg-gradient-to-b from-white to-slate-200 py-16">
                 <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
-
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">100+ Clientes Satisfechos</h2>
                         <p className="mt-2 text-gray-700 leading-relaxed text-justify">
@@ -134,12 +146,10 @@ function CarruselClientes() {
                             Nuestra dedicación y calidad se reflejan en un alto índice de retención de clientes año tras año.
                         </p>
                     </div>
-
                 </div>
             </div>
 
         </div>
-
     );
 }
 
