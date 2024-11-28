@@ -201,7 +201,7 @@ function NavBar() {
           >
             {t('navbar.contact')}
           </Link>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
             <button onClick={() => changeLanguage('en')} className="w-5 h-5">
               <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" />
             </button>
@@ -244,7 +244,7 @@ function NavBar() {
             >
               {t('navbar.contact')}
             </Link>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <button onClick={() => changeLanguage('en')}>
                 <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-6 h-6" />
               </button>
