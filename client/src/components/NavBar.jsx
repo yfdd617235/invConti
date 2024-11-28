@@ -30,10 +30,10 @@ function NavBar() {
 
   return (
     <nav className="bg-white h-16 fixed top-0 w-full py-0 z-50 shadow-md">
-      <div className="flex justify-between items-center h-full px-10">
+      <div className="flex justify-between items-center h-full px-5">
         {/* Logo */}
         <Link to="home" smooth={true} duration={1000} className="cursor-pointer">
-          <div className="h-14">
+          <div className="h-10 lg:h-14 ">
             <img
               src={`${import.meta.env.BASE_URL}logoIC.webp`}
               alt="PPI"
@@ -61,7 +61,7 @@ function NavBar() {
           </Link>
           <div>
             <button onClick={() => changeLanguage('en')} className="mr-1">
-              <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-4 h-4" />
+              <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-4 h-4 mr-2" />
             </button>
             <button onClick={() => changeLanguage('es')} className="">
               <img src={`${import.meta.env.BASE_URL}esFlag.png`} alt="Español" className="w-4 h-4" />
@@ -95,7 +95,7 @@ function NavBar() {
             </Link>
             <div>
               <button onClick={() => changeLanguage('en')} className="mr-1">
-                <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-4 h-4" />
+                <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-4 h-4 mr-2" />
               </button>
               <button onClick={() => changeLanguage('es')} className="">
                 <img src={`${import.meta.env.BASE_URL}esFlag.png`} alt="Español" className="w-4 h-4" />
