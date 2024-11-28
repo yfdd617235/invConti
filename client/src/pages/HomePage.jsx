@@ -92,7 +92,7 @@ const HomaPage = () => {
         </div>
 
         {/*About us*/}
-        <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
+        <div id="about" className="snap-section section md:pt-36 text-sm md:text-base">
           <div className="bg-slate-900 text-white">
             <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
 

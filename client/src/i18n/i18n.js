@@ -7,8 +7,8 @@ const resources = {
     en: {
         translation: {
             navbar: {
-                whoweare: "Who We Are",
-                ourcustomers: "Our Customers",
+                about: "Who We Are",
+                clients: "Our Customers",
                 services: "Services",
                 contact: "Contact",
             },
@@ -40,7 +40,7 @@ const resources = {
                 card6text: "We offer advanced technological solutions to optimize internal processes, improve operational efficiency, and support the digital transformation of companies.",
             },
             ourcustomers: {
-                title: "Our Clients",
+                title: "Our Customers",
                 carruseltext1: "Commitment to quality in every service offered.",
                 carruseltext2: "Satisfaction guarantee in every project.",
                 carruseltext3: "Personalized attention and constant commitment.",
