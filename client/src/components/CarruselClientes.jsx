@@ -60,7 +60,7 @@ function CarruselClientes() {
     return (
         <div className="py-16">
             <div className="bg-slate-950 flex items-center justify-center py-10">
-                <div className="container flex flex-col gap-10 items-center px-4 xl:px-20">
+                <div className="container flex flex-col gap-10 items-center px-4 xl:px-14">
                     <div className="h-100 w-full text-center">
                         <h2 className="text-2xl font-bold text-white">{t('ourcustomers.title')}</h2>
                     </div>
@@ -109,11 +109,11 @@ function CarruselClientes() {
 
             {/* Estadística clientes */}
             <div className="bg-gradient-to-b from-white to-slate-200 py-16">
-                <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
+                <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
                     <div className="md:w-2/3">
-                        <h2 className="font-bold md:text-xl">100+ Clientes Satisfechos</h2>
+                        <h2 className="font-bold md:text-xl">{t('ourcustomers.title1')}</h2>
                         <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                            Confiamos en relaciones sólidas y duraderas, brindando una experiencia satisfactoria a cada cliente.
+                        {t('ourcustomers.text1')}
                         </p>
                     </div>
 
@@ -121,9 +121,9 @@ function CarruselClientes() {
                     <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
 
                     <div className="md:w-2/3">
-                        <h2 className="font-bold md:text-xl">200+ Proyectos Ejecutados</h2>
+                        <h2 className="font-bold md:text-xl">{t('ourcustomers.title2')}</h2>
                         <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                            Más de 200 proyectos completados con éxito, garantizando profesionalismo y calidad en cada etapa.
+                        {t('ourcustomers.text2')}
                         </p>
                     </div>
 
@@ -131,9 +131,9 @@ function CarruselClientes() {
                     <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
 
                     <div className="md:w-2/3">
-                        <h2 className="font-bold md:text-xl">Cobertura en 15+ Sectores</h2>
+                        <h2 className="font-bold md:text-xl">{t('ourcustomers.title3')}</h2>
                         <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                            Ofrecemos soluciones personalizadas para diversas industrias, adaptándonos a las necesidades específicas de cada sector.
+                        {t('ourcustomers.text3')}
                         </p>
                     </div>
 
@@ -141,9 +141,9 @@ function CarruselClientes() {
                     <div className="hidden md:block h-40 w-[2px] bg-blue-900"></div>
 
                     <div className="md:w-2/3">
-                        <h2 className="font-bold md:text-xl">95% Retención de Clientes</h2>
+                        <h2 className="font-bold md:text-xl">{t('ourcustomers.title4')}</h2>
                         <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                            Nuestra dedicación y calidad se reflejan en un alto índice de retención de clientes año tras año.
+                        {t('ourcustomers.text4')}
                         </p>
                     </div>
                 </div>

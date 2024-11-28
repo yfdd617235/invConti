@@ -45,8 +45,20 @@ const resources = {
                 carruseltext2: "Satisfaction guarantee in every project.",
                 carruseltext3: "Personalized attention and constant commitment.",
                 carruseltext4: "Effective collaboration that enhances our services.",
+                title1: "100+ Satisfied Clients",
+                text1: "We trust in solid and lasting relationships, providing a satisfying experience for every client.",
+                title2: "200+ Projects Executed",
+                text2: "Over 200 projects successfully completed, we always ensure professionalism and quality at every stage.",
+                title3: "Coverage in 15+ Sectors",
+                text3: "We offer personalized solutions for various industries, adapting to the specific needs of each sector.",
+                title4: "95% Client Retention",
+                text4: "Our dedication and quality are reflected in a high client retention rate year after year.",
+
             },
-            
+            contact: {
+                contact: "Contact",
+                location: "Location"
+            }
 
         },
     },
@@ -91,7 +103,19 @@ const resources = {
                 carruseltext2: "Garantía de satisfacción en cada proyecto.",
                 carruseltext3: "Atención personalizada y compromiso constante.",
                 carruseltext4: "Colaboración efectiva que potencia nuestros servicios.",
+                title1: "100+ Clientes Satisfechos",
+                text1: "Confiamos en relaciones sólidas y duraderas, brindando una experiencia satisfactoria a cada cliente.",
+                title2: "200+ Proyectos Ejecutados",
+                text2: "Más de 200 proyectos completados con éxito, garantizando profesionalismo y calidad en cada etapa.",
+                title3: "Cobertura en 15+ Sectores",
+                text3: "Ofrecemos soluciones personalizadas para diversas industrias, adaptándonos a las necesidades específicas de cada sector.",
+                title4: "95% Retención de Clientes",
+                text4: "Nuestra dedicación y calidad se reflejan en un alto índice de retención de clientes año tras año.",
             },
+            contact: {
+                contact: "Contacto",
+                location: "Ubicación"
+            }
         },
     },
 };

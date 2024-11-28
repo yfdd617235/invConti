@@ -89,12 +89,12 @@ const HomaPage = () => {
               {t('jumbotron.message')}
             </p>
           </div>
-         </div>
+        </div>
 
         {/*About us*/}
         <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
           <div className="bg-slate-900 text-white">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
+            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
 
               <div className="md:w-1/2 pt-10 md:py-10">
                 <h2 className="md:text-2xl font-bold text-center">{t('whoarewe.whoarewe')}</h2> <br />
@@ -103,7 +103,7 @@ const HomaPage = () => {
                 </p>
                 <br />
                 <p className="text-justify">
-                {t('whoarewe.whoarewetext2')}
+                  {t('whoarewe.whoarewetext2')}
                 </p>
               </div>
 
@@ -128,12 +128,12 @@ const HomaPage = () => {
 
           {/*Mision & Vision*/}
           <div className="bg-gradient-to-b from-white to-slate-200">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
+            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
 
               <div className="md:w-2/3 pt-10 md:py-10">
                 <h2 className="font-bold md:text-xl">{t('whoarewe.mission')}</h2>
                 <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                {t('whoarewe.missiontext')}
+                  {t('whoarewe.missiontext')}
                 </p>
               </div>
 
@@ -143,7 +143,7 @@ const HomaPage = () => {
               <div className="md:w-2/3 pb-10 md:py-10">
                 <h2 className="font-bold md:text-xl">{t('whoarewe.vision')}</h2>
                 <p className="mt-2 text-gray-700 leading-relaxed text-justify">
-                {t('whoarewe.visiontext')}
+                  {t('whoarewe.visiontext')}
                 </p>
               </div>
 
@@ -152,63 +152,63 @@ const HomaPage = () => {
         </div>
 
 
-    {/* Cards Section */}
-<div id="services" className="snap-section section container mx-auto px-4 xl:px-20 mb-32">
-  <h2 className="text-lg md:text-2xl font-bold text-center py-16">Servicios</h2>
-  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-    {/* Card Template */}
-    {[
-      {
-        title: t('services.card1title'),
-        description: t('services.card1text'),
-        image: "ofi1.jpg",
-      },
-      {
-        title: t('services.card2title'),
-        description: t('services.card2text'),
-        image: "ofi2.jpg",
-      },
-      {
-        title: t('services.card3title'),
-        description: t('services.card3text'),
-        image: "ofi3.jpg",
-      },
-      {
-        title: t('services.card4title'),
-        description: t('services.card4text'),
-        image: "ofi4.jpg",
-      },
-      {
-        title: t('services.card5title'),
-        description: t('services.card5text'),
-        image: "ofi5.jpg",
-      },
-      {
-        title: t('services.card6title'),
-        description: t('services.card6text'),
-        image: "ofi6.jpg",
-      },
-    ].map((card, index) => (
-      <div key={index} className="cursor-pointer h-full shadow-md rounded-lg relative group overflow-hidden hover:z-50">
-        {/* Image */}
-        <img
-          src={`${import.meta.env.BASE_URL}${card.image}`}
-          alt={card.title}
-          className="w-full h-48 object-cover rounded-t-lg transition-opacity duration-1000 group-hover:opacity-0"
-        />
-        {/* Title (visible initially) */}
-        <div className="p-4 md:p-6 text-center">
-          <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
+        {/* Cards Section */}
+        <div id="services" className="snap-section section container mx-auto px-4 xl:px-14 mb-32">
+          <h2 className="text-lg md:text-2xl font-bold text-center py-16">{t('services.services')}</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            {/* Card Template */}
+            {[
+              {
+                title: t('services.card1title'),
+                description: t('services.card1text'),
+                image: "ofi1.jpg",
+              },
+              {
+                title: t('services.card2title'),
+                description: t('services.card2text'),
+                image: "ofi2.jpg",
+              },
+              {
+                title: t('services.card3title'),
+                description: t('services.card3text'),
+                image: "ofi3.jpg",
+              },
+              {
+                title: t('services.card4title'),
+                description: t('services.card4text'),
+                image: "ofi4.jpg",
+              },
+              {
+                title: t('services.card5title'),
+                description: t('services.card5text'),
+                image: "ofi5.jpg",
+              },
+              {
+                title: t('services.card6title'),
+                description: t('services.card6text'),
+                image: "ofi6.jpg",
+              },
+            ].map((card, index) => (
+              <div key={index} className="cursor-pointer h-full shadow-md rounded-lg relative group overflow-hidden hover:z-50">
+                {/* Image */}
+                <img
+                  src={`${import.meta.env.BASE_URL}${card.image}`}
+                  alt={card.title}
+                  className="w-full h-48 object-cover rounded-t-lg transition-opacity duration-1000 group-hover:opacity-0"
+                />
+                {/* Title (visible initially) */}
+                <div className="p-4 md:p-6 text-center">
+                  <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
+                </div>
+                {/* Description (hidden until hover) */}
+                <div className="p-4 md:p-6 absolute inset-0 bg-white flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
+                  <p className="text-sm md:text-base text-gray-700 mt-2 text-justify">{card.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        {/* Description (hidden until hover) */}
-        <div className="p-4 md:p-6 absolute inset-0 bg-white flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
-          <p className="text-sm md:text-base text-gray-700 mt-2 text-justify">{card.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 
 
         {/*Nuestros Clientes */}
@@ -227,7 +227,7 @@ const HomaPage = () => {
 
               <div className="flex items-center justify-left p-6">
                 <div className="flex flex-col space-y-3 text-left">
-                  <h5 className="text-xs md:text-sm lg:text-lg font-bold">Contacto</h5>
+                  <h5 className="text-xs md:text-sm lg:text-lg font-bold">{t('contact.contact')}</h5>
 
                   {/* Correo electrónico */}
                   <a
@@ -343,7 +343,7 @@ const HomaPage = () => {
 
               <div className="flex items-center justify-left p-6">
                 <div className="flex flex-col space-y-3 text-left">
-                  <h5 className="text-xs md:text-sm lg:text-lg font-bold">Ubicación</h5>
+                  <h5 className="text-xs md:text-sm lg:text-lg font-bold">{t('contact.location')}</h5>
                   <div className="flex items-center">
                     <a
                       href="https://www.google.com/maps/search/?api=1&query=Cra+43A+%233+Sur+-130,+Torre+2,+Oficina+915,+CE+Milla+de+Oro,+Medellín,+Antioquia"
