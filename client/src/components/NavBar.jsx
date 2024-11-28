@@ -32,18 +32,21 @@ function NavBar() {
     <nav className="bg-white h-16 fixed top-0 w-full py-0 z-50 shadow-md">
       <div className="flex justify-between items-center h-full px-5">
         {/* Logo */}
-        <Link to="home" smooth={true} duration={1000} className="cursor-pointer">
-          <div className="h-10 lg:h-14 ">
-            <img
-              src={`${import.meta.env.BASE_URL}logoIC.webp`}
-              alt="PPI"
-              className="h-full w-full object-contain object-center "
-            />
-          </div>
-        </Link>
+        <div>
+          <Link to="home" smooth={true} duration={1000} className="cursor-pointer">
+            <div className="h-10 lg:h-14 ">
+              <img
+                src={`${import.meta.env.BASE_URL}logoIC.webp`}
+                alt="PPI"
+                className="h-full w-full object-contain object-center "
+              />
+            </div>
+          </Link>
+        </div>
+
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10 items-center">
+        <div className="hidden md:flex space-x-7 items-center">
           <Link to="about" smooth={true} duration={1000} className="cursor-pointer font-bold hover:text-blue-900 relative group">
             {t('navbar.whoweare')}
             <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
