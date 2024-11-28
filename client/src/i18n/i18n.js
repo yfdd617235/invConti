@@ -65,8 +65,8 @@ const resources = {
     es: {
         translation: {
             navbar: {
-                whoweare: "Quiénes Somos",
-                ourcustomers: "Nuestros Clientes",
+                about: "Quiénes Somos",
+                clients: "Nuestros Clientes",
                 services: "Servicios",
                 contact: "Contacto",
             },
