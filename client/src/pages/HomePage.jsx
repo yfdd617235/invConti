@@ -92,7 +92,7 @@ const HomaPage = () => {
         {/*About us*/}
         <div id="about" className="snap-section section md:my-32 text-sm md:text-base">
           <div className="bg-slate-900 text-white">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
 
               <div className="md:w-1/2 pt-10 md:py-10">
                 <h2 className="md:text-2xl font-bold text-center">¿Quiénes somos?</h2> <br />
@@ -130,7 +130,7 @@ const HomaPage = () => {
 
           {/*Mision & Vision*/}
           <div className="bg-gradient-to-b from-white to-slate-200">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
 
               <div className="md:w-2/3 pt-10 md:py-10">
                 <h2 className="font-bold md:text-xl">Misión</h2>
@@ -155,7 +155,7 @@ const HomaPage = () => {
 
 
     {/* Cards Section */}
-<div id="services" className="snap-section section container mx-auto px-4 md:px-20 mb-32">
+<div id="services" className="snap-section section container mx-auto px-4 xl:px-20 mb-32">
   <h2 className="text-lg md:text-2xl font-bold text-center py-16">Servicios</h2>
   <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
     {/* Card Template */}

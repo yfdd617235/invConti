@@ -46,7 +46,7 @@ function CarruselClientes() {
     return (
         <div className="py-16">
             <div className="bg-slate-950 flex items-center justify-center py-10">
-                <div className="container flex flex-col gap-10 items-center px-4 md:px-20">
+                <div className="container flex flex-col gap-10 items-center px-4 xl:px-20">
                     <div className="h-100 w-full text-center">
                         <h2 className="text-2xl font-bold text-white">Nuestros Clientes</h2>
                     </div>
@@ -96,7 +96,7 @@ function CarruselClientes() {
 
             {/*Estadistica clientes */}
             <div className="bg-gradient-to-b from-white to-slate-200 py-16">
-                <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 md:px-20">
+                <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-20">
 
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">100+ Clientes Satisfechos</h2>
