@@ -94,7 +94,7 @@ const HomaPage = () => {
         {/*About us*/}
         <div id="about" className="snap-section section md:pt-36 text-sm md:text-base">
           <div className="bg-slate-900 text-white">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
+            <div className="gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 lg:px-20 2xl:px-60">
 
               <div className="md:w-1/2 pt-10 md:py-10">
                 <h2 className="md:text-2xl font-bold text-center">{t('whoarewe.whoarewe')}</h2> <br />
@@ -128,7 +128,7 @@ const HomaPage = () => {
 
           {/*Mision & Vision*/}
           <div className="bg-gradient-to-b from-white to-slate-200">
-            <div className="container gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
+            <div className="gap-10 flex flex-col md:flex-row justify-center items-center mx-auto px-4 lg:px-20 2xl:px-60">
 
               <div className="md:w-2/3 pt-10 md:py-10">
                 <h2 className="font-bold md:text-xl">{t('whoarewe.mission')}</h2>
@@ -153,7 +153,7 @@ const HomaPage = () => {
 
 
         {/* Cards Section */}
-        <div id="services" className="snap-section section container mx-auto px-4 xl:px-14 mb-32">
+        <div id="services" className="snap-section section mx-auto px-4 lg:px-20 2xl:px-60">
           <h2 className="text-lg md:text-2xl font-bold text-center py-16">{t('services.services')}</h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {/* Card Template */}
@@ -201,9 +201,9 @@ const HomaPage = () => {
                   <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
                 </div>
                 {/* Description (hidden until hover) */}
-                <div className="p-4 md:p-6 absolute inset-0 bg-white flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="p-4 md:p-6 absolute inset-0 bg-white flex flex-col justify-center text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h5 className="text-base md:text-lg font-semibold text-blue-900">{card.title}</h5>
-                  <p className="text-sm md:text-base text-gray-700 mt-2 text-justify">{card.description}</p>
+                  <p className="text-sm md:text-base text-gray-700 mt-2">{card.description}</p>
                 </div>
               </div>
             ))}

@@ -60,7 +60,7 @@ function CarruselClientes() {
     return (
         <div className="py-16">
             <div className="bg-slate-950 flex items-center justify-center py-10">
-                <div className="container flex flex-col gap-10 items-center px-4 xl:px-14">
+                <div className=" flex flex-col gap-10 items-center px-4 lg:px-20 2xl:px-60">
                     <div className="h-100 w-full text-center">
                         <h2 className="text-2xl font-bold text-white">{t('ourcustomers.title')}</h2>
                     </div>
@@ -112,7 +112,7 @@ function CarruselClientes() {
                 <div className="container gap-4 flex flex-col md:flex-row justify-center items-center mx-auto px-4 xl:px-14">
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">{t('ourcustomers.title1')}</h2>
-                        <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                        <p className="mt-2 text-gray-700 leading-relaxed ">
                         {t('ourcustomers.text1')}
                         </p>
                     </div>
@@ -122,7 +122,7 @@ function CarruselClientes() {
 
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">{t('ourcustomers.title2')}</h2>
-                        <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                        <p className="mt-2 text-gray-700 leading-relaxed">
                         {t('ourcustomers.text2')}
                         </p>
                     </div>
@@ -132,7 +132,7 @@ function CarruselClientes() {
 
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">{t('ourcustomers.title3')}</h2>
-                        <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                        <p className="mt-2 text-gray-700 leading-relaxed">
                         {t('ourcustomers.text3')}
                         </p>
                     </div>
@@ -142,7 +142,7 @@ function CarruselClientes() {
 
                     <div className="md:w-2/3">
                         <h2 className="font-bold md:text-xl">{t('ourcustomers.title4')}</h2>
-                        <p className="mt-2 text-gray-700 leading-relaxed text-justify">
+                        <p className="mt-2 text-gray-700 leading-relaxed">
                         {t('ourcustomers.text4')}
                         </p>
                     </div>
