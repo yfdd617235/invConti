@@ -240,8 +240,8 @@ const HomaPage = () => {
                     <span >gerencia@inversionesconti.com</span>
                   </a>
 
-                  <div className="flex gap-4">
-                    {/* LinkedIn */}
+                  {/* <div className="flex gap-4">
+                    
                     <a
                       href="https://es.linkedin.com/company/conti"
                       target="_blank"
@@ -259,7 +259,7 @@ const HomaPage = () => {
                       </svg>
                     </a>
 
-                    {/* WhatsApp */}
+                    
                     <a
                       href="https://wa.me/+573104221653"
                       target="_blank"
@@ -278,7 +278,7 @@ const HomaPage = () => {
                       </svg>
                     </a>
 
-                    {/* Instagram */}
+                    
                     <a
                       href="https://www.instagram.com/tu_nombre_usuario"
                       target="_blank"
@@ -296,7 +296,7 @@ const HomaPage = () => {
                       </svg>
                     </a>
 
-                    {/* Facebook */}
+                   
                     <a
                       href="https://www.facebook.com/tu_nombre_usuario"
                       target="_blank"
@@ -314,9 +314,6 @@ const HomaPage = () => {
                       </svg>
                     </a>
 
-
-
-                    {/* X */}
                     <a
                       href="https://twitter.com/tu_nombre_usuario"
                       target="_blank"
@@ -332,7 +329,7 @@ const HomaPage = () => {
                         <path d="M22.46 6c-.77.34-1.6.57-2.48.67a4.34 4.34 0 0 0 1.91-2.39c-.84.5-1.77.87-2.76 1.07A4.303 4.303 0 0 0 16.54 5a4.3 4.3 0 0 0-4.3 4.3c0 .34.04.67.11 1a12.23 12.23 0 0 1-8.86-4.48c-.36.62-.56 1.34-.56 2.1 0 1.44.73 2.72 1.83 3.47-.67-.02-1.29-.2-1.83-.5v.05c0 2.01 1.43 3.68 3.34 4.05-.35.1-.73.15-1.12.15-.27 0-.53-.02-.78-.07.53 1.67 2.07 2.88 3.91 2.91-1.43 1.12-3.23 1.79-5.19 1.79-.34 0-.67-.02-1-.07 1.83 1.17 4 1.86 6.32 1.86 7.62 0 11.77-6.3 11.77-11.75 0-.18 0-.35-.01-.53a8.31 8.31 0 0 0 2.04-2.12z" />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
 
 
                 </div>
