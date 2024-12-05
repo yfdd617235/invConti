@@ -181,7 +181,7 @@ function NavBar() {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-7 items-center">
-          {['about', 'clients', 'services'].map((section) => (
+          {['about', 'services', 'clients', 'contact' ].map((section) => (
             <Link
               key={section}
               to={section}
@@ -193,14 +193,6 @@ function NavBar() {
               <span className="block h-[2px] w-0 bg-blue-900 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
-          <Link
-            to="contact"
-            smooth={true}
-            duration={1000}
-            className="cursor-pointer text-white hover:bg-blue-900 bg-slate-800 rounded-md p-1 px-2"
-          >
-            {t('navbar.contact')}
-          </Link>
           <div className="flex items-center space-x-3">
             <button onClick={() => changeLanguage('en')} className="w-5 h-5">
               <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" />
@@ -223,7 +215,7 @@ function NavBar() {
       {isMenuOpen && (
         <div ref={menuRef} className="lg:hidden absolute top-16 left-0 w-full bg-white shadow-lg z-50">
           <div className="flex flex-col space-y-4 px-8 py-6">
-            {['about', 'clients', 'services'].map((section) => (
+            {['about', 'services', 'clients', 'contact'].map((section) => (
               <Link
                 key={section}
                 to={section}
@@ -235,15 +227,6 @@ function NavBar() {
                 {t(`navbar.${section}`)}
               </Link>
             ))}
-            <Link
-              to="contact"
-              smooth={true}
-              duration={1000}
-              onClick={closeMenu}
-              className="text-white bg-slate-800 rounded-md p-1 px-2 hover:bg-blue-900"
-            >
-              {t('navbar.contact')}
-            </Link>
             <div className="flex items-center space-x-3">
               <button onClick={() => changeLanguage('en')}>
                 <img src={`${import.meta.env.BASE_URL}enFlag.png`} alt="English" className="w-6 h-6" />
